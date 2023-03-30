@@ -1,5 +1,8 @@
-import React from 'react';
-export function TodoItem({ todo }) {
+import React from "react";
+import style from '../reactTodos.module.css';
+
+function TodoItem({todo, onComplete, onDeleteItem}) {
+
     const GetStyle = () => {
         return {
             textDecoration: todo.completed ? 'line-through' : 'none',
@@ -14,7 +17,10 @@ export function TodoItem({ todo }) {
 
     return (
         <div style={GetStyle()}>
+            <input type="checkbox" checked={todo.completed} onChange={()=> onComplete(todo.id)} />
             {todo.task}
+            <button className={style.add_btn} onClick={()=> onDeleteItem(todo.id)}>X</button>
         </div>
     )
 }
+export {TodoItem};

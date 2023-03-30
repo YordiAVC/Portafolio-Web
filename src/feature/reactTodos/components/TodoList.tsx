@@ -1,14 +1,15 @@
-import React from 'react'
-import { TodoItem } from './TodoItem'
+import React from 'react';
+import { TodoItem } from './TodoItem';
 
-export const TodoList = ({todos}) => {
+const TodoList = ({todos, onComplete, onDeleteItem}) => {
   return (
     <div>
       {
         todos.map((todo, index)=>(
-          <TodoItem key={`todo-${index}`} todo ={todo}/>
+          <TodoItem key={index} todo={todo} onComplete ={onComplete} onDeleteItem={onDeleteItem}/>
         ))          
       }
     </div>
   )
 }
+export {TodoList};

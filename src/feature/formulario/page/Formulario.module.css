@@ -1,0 +1,153 @@
+.contenedor{
+    background:url('src/feature/formulario/assets/79892.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: right;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    height: 100vh;
+    /* animation: fondo 15s ease infinite; */
+}
+.contenedor_derecho{
+    width: 60%;
+    height:100%;
+}
+.contenedor_izquierdo{
+    background:rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    position:relative;
+    width: 30%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 5px 0 5px 1px rgba(0, 0, 0, 0.521);
+    color:white;
+    
+}
+.contenedor_espacio{
+    clip-path: polygon(50% 0%, 100% 0%, 100% 75%, 25% 100%, 0% 100%,0% 95%, 0% 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(90deg, #ffffff7c 0%,rgba(41, 0, 0, 0.753) 100%);
+    background-size: 500%;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 30vh;
+    animation: fondo 5s ease infinite; 
+}
+.contenedor_form{
+    clip-path: polygon(27% 0%,100% 10%, 100% 100%, 50% 100%, 0% 90%,0% 0%);
+    background: linear-gradient(90deg, #2b00007c 0%,rgba(201, 37, 37, 0.753) 100%);
+    background-repeat: no-repeat;
+    background-size: 500%;
+    backdrop-filter: blur(20px);
+    /* border: 5px solid rgb(39, 28, 28); */
+    inset: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fondo 5s ease infinite;
+}
+.caja_form{
+    
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+.caja{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo{
+    
+    /* -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-stroke: 2px rgb(255, 255, 255); */
+    font-size: 60px;
+    font-weight: 700;
+    color:white;
+    text-shadow: 1px 1px rgb(70, 70, 70),2px 2px rgb(70, 70, 70),3px 3px rgb(70, 70, 70),4px 4px rgb(70, 70, 70),5px 5px rgb(32, 32, 32),7px 7px rgb(0, 0, 0);
+    
+
+}
+.label{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.input{
+    box-shadow: inset 2px 2px 5px 5px rgba(0, 0, 0, 0.301);
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    padding:25px;
+    border-radius: 10px;
+}
+.input:focus{
+    box-shadow: inset 2px 2px 5px 5px rgba(0, 0, 0, 0);
+}
+
+.boton{
+    cursor:pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px ;
+    padding:15px;
+    background: green;
+    color:white;
+    box-shadow: inset 1px 3px 5px 1px rgba(0, 0, 0, 0),
+    inset -1px -3px 5px 1px rgba(255, 255, 255, 0);
+    transition: 0.3s ease;
+}
+
+.boton:hover{
+    background: rgb(1, 184, 1);
+    box-shadow: inset 3px 3px 5px 1px rgba(0, 0, 0, 0),
+    inset -3px -3px 5px 1px rgba(255, 255, 255, 0);
+}
+
+.boton:active{
+    background: rgb(0, 65, 0);
+    color:rgb(255, 255, 255);
+    box-shadow: inset 3px 3px 5px 1px rgb(0, 0, 0),
+    inset -3px -3px 5px 1px rgb(255, 255, 255);
+}
+@keyframes fondo {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}  
+

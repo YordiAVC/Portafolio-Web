@@ -1,0 +1,33 @@
+.contenedor{
+    overflow: auto;
+    width:100%;
+    height: 100vh;
+    background-image: url('src/feature/fetchApi/assets/img.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap:15px;
+}
+.cinco_columnas{
+    width: auto;
+    display:grid;
+    grid-template-columns: 100px repeat(4, 250px);
+    gap:15px;
+}
+.celda{
+    color:white;
+    background: rgba(0, 0, 0, 0.63);
+    font-weight: 400;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    overflow: hidden;
+    padding:15px;
+    border:5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
