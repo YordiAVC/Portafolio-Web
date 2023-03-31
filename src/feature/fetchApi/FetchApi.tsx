@@ -12,7 +12,7 @@ export const FetchApi = () => {
         usuario_nombre: string;
         usuario_apellido: string;
         usuario_codigo: string;
-        usuario_correo:string
+        usuario_correo: string
     }
     const [name, setName] = useState<User[]>([]);
 
@@ -24,25 +24,29 @@ export const FetchApi = () => {
                 setName(res.data);
             });
     }, []);
-    return(
-      <div className={style.contenedor}>
-        <div className={style.cinco_columnas}>
-            <div className={style.celda}><p>id :</p></div>
-            <div className={style.celda}><p>Nombre :</p></div>
-            <div className={style.celda}><p>Apellido :</p></div>
-            <div className={style.celda}><p>Codigo :</p></div>
-            <div className={style.celda}><p>Correo :</p></div>
-        </div>
-        {name.map((usuario)=>(
-            <div className={style.cinco_columnas} key={usuario.id_usuario}>
-                <div className={style.celda}>{usuario.id_usuario}</div>
-                <div className={style.celda}>{usuario.usuario_nombre}</div>
-                <div className={style.celda}>{usuario.usuario_apellido}</div>
-                <div className={style.celda}>{usuario.usuario_codigo}</div>
-                <div className={style.celda}>{usuario.usuario_correo}</div>
+    return (
+        <div className={style.contenedor}>
+            <nav className={style.navegador}></nav>
+            <div className={style.contenedor_tabla}>
+                <div className={style.cinco_columnas}>
+                    <div className={style.celda}><p>id :</p></div>
+                    <div className={style.celda}><p>Nombre :</p></div>
+                    <div className={style.celda}><p>Apellido :</p></div>
+                    <div className={style.celda}><p>Codigo :</p></div>
+                    <div className={style.celda}><p>Correo :</p></div>
+                </div>
+                {name.map((usuario) => (
+                    <div className={style.cinco_columnas} key={usuario.id_usuario}>
+                        <div className={style.celda}>{usuario.id_usuario}</div>
+                        <div className={style.celda}>{usuario.usuario_nombre}</div>
+                        <div className={style.celda}>{usuario.usuario_apellido}</div>
+                        <div className={style.celda}>{usuario.usuario_codigo}</div>
+                        <div className={style.celda}>{usuario.usuario_correo}</div>
+                    </div>
+
+                ))}
             </div>
-                
-        ))}
-      </div>  
+
+        </div>
     );
 };
